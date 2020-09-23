@@ -1,7 +1,25 @@
-import '../styles/globals.css'
+import { ClientContext } from 'graphql-hooks';
+import { appWithTranslation } from './../i18n.js';
+import { useGraphQLClient } from 'lib/graphql-client';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import "../styles/scss/bootstrap.scss";
+
+const CustomApp = ({ Component, pageProps }) => {
+  const graphQLClient = useGraphQLClient(pageProps.initialGraphQLState);
+
+  return (
+    <ClientContext.Provider value={graphQLClient}>
+      <Component {...pageProps} />
+    </ClientContext.Provider>
+  );
 }
 
-export default MyApp
+CustomApp.getInitialProps = async ({ Component, ctx }) => {
+  let pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
+
+  return {
+    pageProps
+  }
+}
+
+export default appWithTranslation(CustomApp)

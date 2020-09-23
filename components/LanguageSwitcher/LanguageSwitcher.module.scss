@@ -1,0 +1,55 @@
+@import "styles/scss/variables";
+
+.languaSwitcher {
+  > button {
+    color: $white;
+    font-size: .95rem;
+    letter-spacing: 1px;
+    padding: 0.1em .4em;
+    background: transparent;
+    border: solid 1px $white;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 1px #343a4040;
+
+    &::before {
+      display: none !important;
+    }
+
+    &:hover, &:active, &:visited, &:focus {
+      color: $white;
+      font-size: .95rem;
+      padding: 0.1em .4em;
+      background: transparent;
+      border: solid 1px $white !important;
+      box-shadow: 1px 1px 1px #343a4040;
+    }
+
+    svg {
+      margin-left: .5rem;
+    }
+
+    div {
+      background-color: red !important;
+    }
+  }
+}
+
+.languaSwitcherMenu {
+  border: none;
+  color: $white !important;
+  background-color: rgba(27, 218, 204, 0.75);
+  box-shadow: 1px 2px 2px 1px rgba(12, 12, 12, 0.11);
+
+  button {
+    color: $white;
+    text-shadow: 1px 1px 2px $dark;
+
+    &:active, &:hover, &:visited, &:focus {
+      text-shadow: none;
+      color: $dark !important;
+      text-decoration: none !important;
+      background-color: rgba(255, 255, 255, 0.53) !important;
+      border: none !important;
+    }
+  }
+}

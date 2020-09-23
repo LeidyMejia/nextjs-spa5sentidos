@@ -1,0 +1,23 @@
+.slider {
+  img {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+.sliderBackground {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
+
+.sliderBackgroundLayer {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #04040438;
+}

@@ -1,0 +1,19 @@
+@import 'styles/scss/variables';
+
+.brand {
+  padding: 0;
+  cursor: pointer;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px $dark;
+  font-family: $font-family-montez;
+  color: rgba(255, 255, 255, 0.9) !important;
+
+  &:hover, &:focus {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  span {
+    color: rgba(0, 0, 0, 0.9);
+  }
+}
