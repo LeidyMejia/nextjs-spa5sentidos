@@ -17,8 +17,9 @@ const Slider = ({ loading, error, data }) => {
     <Carousel indicators={false} className={slider}>
       {!loading && !error && sliders.map(({ title, subtitle, id, images }) =>
         <Carousel.Item key={id}>
-          <div className={sliderBackground} style={{ backgroundImage: `url("${pathImagesApi(images.desktop.url)}")`}}/>
-          <div className={sliderBackgroundLayer} />
+          <div className={sliderBackground} style={{ backgroundImage: `url("${pathImagesApi(images.desktop.url)}")`}}>
+            <div className={sliderBackgroundLayer} />
+          </div>
           <img
             alt={title[lang]}
             className={"carousel-img"}

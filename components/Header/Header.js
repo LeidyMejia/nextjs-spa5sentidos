@@ -11,9 +11,6 @@ const Header = ({ loading, data, error }) => {
 
   return (
     <header className={styles.header}>
-      {/*<Navbar expand={'lg'}  className={styles.headerNavTop}>*/}
-      {/*  <LanguageSwitcher />*/}
-      {/*</Navbar>*/}
       {(!loading && !error) && (
         <Navbar expand={'lg'} className={styles.headerNavBottom}>
           <Brand name={siteInformation.name} />

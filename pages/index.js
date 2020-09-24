@@ -1,12 +1,12 @@
-import { Layout } from "components";
+import {Layout, ServicesHome} from "components";
 import graphQLRequest from 'lib/graphql-request'
 import { initializeGraphQL } from "lib/graphql-client"
-import { queryHeaderData, querySlidersData } from "components/queries";
+import { queryHeaderData, querySlidersData, queryServicesHomeData } from "components/queries";
 
 const Home = () => {
   return (
     <Layout>
-      <h1>{'Services'}</h1>
+      <ServicesHome />
     </Layout>
   );
 };
@@ -15,6 +15,7 @@ Home.getInitialProps = async () => {
   const client = initializeGraphQL()
   await graphQLRequest(client, queryHeaderData)
   await graphQLRequest(client, querySlidersData)
+  await graphQLRequest(client, queryServicesHomeData)
 
   return {
     namespacesRequired: ['common'],

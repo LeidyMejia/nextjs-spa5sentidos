@@ -1,6 +1,6 @@
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
   background: #FFF;
   font-family: $font-family-open-sans !important;
 
@@ -9,13 +9,13 @@ body {
     text-decoration: none;
 
     &:hover {
-      text-decoration: none;
       transition: 0.5s all;
+      text-decoration: none;
     }
 
     &:focus, &:hover {
+      outline: none;
       text-decoration: none;
-      outline: none
     }
   }
 
@@ -25,7 +25,6 @@ body {
     }
   }
 
-  
   label {
     margin: 0;
   }
@@ -33,18 +32,24 @@ body {
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
-    font-family: 'Paytone One', sans-serif;
+    font-family: $font-family-paytone-one;
   }
 
-  
+  h3.title, h1.title {
+    color: $primary;
+    font-size: 42px;
+    letter-spacing: 3px;
+    font-family: $font-family-montez;
+  }
+
   p {
     margin: 0;
     padding: 0;
-    font-family: $font-family-open-sans;
-    font-size: 15px;
-    letter-spacing: 1px;
-    line-height: 1.9;
     color: #999;
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+    font-family: $font-family-open-sans;
   }
 
   ul, ol {

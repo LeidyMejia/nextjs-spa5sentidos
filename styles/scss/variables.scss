@@ -1,5 +1,5 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 
 $primary: #1bdacc;
 $secondary: #b5b5b5;
@@ -11,3 +11,4 @@ $theme-colors: (
 
 $font-family-montez: 'Montez', cursive;
 $font-family-open-sans: 'Open Sans', sans-serif;
+$font-family-paytone-one: 'Paytone One', sans-serif;

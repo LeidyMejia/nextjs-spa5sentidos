@@ -2,7 +2,7 @@ import { ClientContext } from 'graphql-hooks';
 import { appWithTranslation } from './../i18n.js';
 import { useGraphQLClient } from 'lib/graphql-client';
 
-import "../styles/scss/bootstrap.scss";
+import "../styles/scss/index.scss";
 
 const CustomApp = ({ Component, pageProps }) => {
   const graphQLClient = useGraphQLClient(pageProps.initialGraphQLState);
