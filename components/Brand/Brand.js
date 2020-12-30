@@ -13,11 +13,11 @@ const Brand = ({ name = '', href = '/' }) => {
     )
   }
 
-  return (
-    <Link href={href}>
-      <a className={`${styles.brand} navbar-brand font-weight-bold`}>{parseBrandName(name)}</a>
-    </Link>
-  );
+  return name ? (
+      <Link href={href}>
+        <a className={`${styles.brand} navbar-brand font-weight-bold`}>{parseBrandName(name)}</a>
+      </Link>
+    ) : null;
 };
 
 Brand.propTypes = {

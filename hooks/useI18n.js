@@ -3,7 +3,7 @@ import { I18nContext } from 'next-i18next';
 
 export function useI18n() {
   const { i18n } = useContext(I18nContext)
-  const [lang, setLang] = useState(i18n.language || i18n.language);
+  const [lang, setLang] = useState(i18n.language || 'es');
 
   useEffect(() => {
     setLang(i18n.language);

@@ -1,4 +1,5 @@
 import { withQuery } from 'hoc';
+import PropTypes from 'prop-types';
 import { Navbar } from 'react-bootstrap';
 import { queryHeaderData } from './Header.queries';
 import { Brand, Navigation, LanguageSwitcher } from 'components';
@@ -21,5 +22,11 @@ const Header = ({ loading, data, error }) => {
     </header>
   )
 };
+
+Header.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  data: PropTypes.object.isRequired,
+  error: PropTypes.any,
+}
 
 export default withQuery(queryHeaderData)(Header);

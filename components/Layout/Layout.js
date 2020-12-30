@@ -1,12 +1,16 @@
-import { Header, Slider } from "components";
+import { Header, Slider } from 'components';
 
 const Layout = ({ children }) => {
   return (
-    <div className="home">
-      <Header />
-      <Slider prop1={"prop1"}/>
-      {children}
-    </div>
+    <>
+      <div className={'home'}>
+        {/*<Header />*/}
+        {/*<Slider prop1={'prop1'}/>*/}
+      </div>
+      <div id={'app'}>
+        {children}
+      </div>
+    </>
   );
 };
 

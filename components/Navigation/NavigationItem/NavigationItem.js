@@ -1,12 +1,9 @@
 import Link from 'next/link';
-import { useI18n } from "hooks";
 import PropTypes from 'prop-types';
 import { Nav } from 'react-bootstrap';
 import styled from './NavigationItem.module.scss'
 
 const NavigationItem = ({ url, label }) => {
-  const { lang } = useI18n();
-
   return (
     <Nav.Item className={"nav-item mr-lg-2 mb-lg-0 mb-2"}>
       <Link href={ lang === 'es' ? url.es : url.en } passHref>

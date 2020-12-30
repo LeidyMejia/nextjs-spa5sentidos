@@ -1,10 +1,8 @@
-import { useI18n } from "hooks";
 import { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { Dropdown, ButtonGroup } from 'react-bootstrap';
 import { SpanishLanguage, EnglishLanguage } from "components";
-import { withTranslation } from '../../i18n';
-import { Dropdown, DropdownButton, ButtonGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { languaSwitcher, languaSwitcherMenu } from './LanguageSwitcher.module.scss'
 
@@ -41,4 +39,8 @@ const LanguageSwitcher = ({ t }) => {
   )
 }
 
-export default withTranslation('common')(LanguageSwitcher)
+LanguageSwitcher.propTypes = {
+  t: PropTypes.func.isRequired
+}
+
+export default LanguageSwitcher

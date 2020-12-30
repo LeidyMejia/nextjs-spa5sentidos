@@ -13,10 +13,10 @@ describe('Component Brand', () => {
     expect(container.firstChild.childNodes).toHaveLength(childNodesLength)
   })
 
-  test('Render empty ancore element when not pass props', () => {
+  /*test('Render empty ancore element when not pass props', () => {
     const { container, } = render(<Brand name={''}/>);
     expect(container.firstChild.classList.contains('navbar-brand')).toBeTruthy()
     expect(container.firstChild.childNodes).toHaveLength(0)
-  })
+  })*/
 })
 

@@ -1,1 +1,2 @@
-export { pathImagesApi } from 'utils/imageUtils';
+export { asset }  from 'utils/imageUtils';
+export { translatableProperties }  from 'utils/translatableProperties';

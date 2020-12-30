@@ -1,3 +1,4 @@
-export const pathImagesApi = (relativePathImage = '') => {
-  return process.env.IMAGES_URL + relativePathImage;
+export function asset(image = '') {
+  return `${process.env.IMAGES_URL}${image}`;
 }
+

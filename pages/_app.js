@@ -1,5 +1,4 @@
 import { ClientContext } from 'graphql-hooks';
-import { appWithTranslation } from './../i18n.js';
 import { useGraphQLClient } from 'lib/graphql-client';
 
 import "../styles/scss/index.scss";
@@ -22,4 +21,4 @@ CustomApp.getInitialProps = async ({ Component, ctx }) => {
   }
 }
 
-export default appWithTranslation(CustomApp)
+export default CustomApp

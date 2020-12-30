@@ -11,3 +11,7 @@ export { default as ServicesListItem } from "./Services/ServicesList/ServicesLis
 export { default as ServicesHome } from "./Services/ServicesHome/ServicesHome";
 export { default as SpanishLanguage } from "./Utils/Svg/SpanishLanguage/SpanishLanguage";
 export { default as EnglishLanguage } from "./Utils/Svg/EnglishLanguage/EnglishLanguage";
+export { default as ContactUsFeatured } from "./ContactUs/ContactUsFeatured/ContactUsFeatured";
+export { default as AboutUsHome } from "./AboutUs/AboutUsHome/AboutUsHome";
+export { default as Button } from "./Common/Button/Button";
+export { default as Link } from "./Common/Link/Link";

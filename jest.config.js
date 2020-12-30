@@ -22,5 +22,6 @@ module.exports = {
     "^pages": "<rootDir>/pages",
     "^styles": "<rootDir>/styles",
     "^components$": "<rootDir>/components",
+    "^components\/queries$": "<rootDir>/components/queries.js",
   },
 }

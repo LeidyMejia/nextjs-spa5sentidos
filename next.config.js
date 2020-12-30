@@ -1,21 +1,22 @@
 require('dotenv').config()
 const path = require('path');
-const { nextI18NextRewrites } = require('next-i18next/rewrites')
+const { locales, defaultLocale } = require('./i18n.json')
 
-const localeSubpaths = {
-  en: 'en',
-}
+const nextTranslate = require('next-translate')
 
-module.exports = {
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
+module.exports = nextTranslate({
+  i18n: {
+    locales,
+    defaultLocale,
+  },
   env: {
     API_URL: process.env.API_URL,
     IMAGES_URL: process.env.IMAGES_URL,
   },
   publicRuntimeConfig: {
-    API_URL: process.env.API_URL
+    API_URL: process.env.API_URL,
   },
-  webpack: config => {
+  webpack: (config, { isServer, webpack }) => {
     config.resolve.alias['lib'] = path.resolve(__dirname, 'lib');
     config.resolve.alias['hoc'] = path.resolve(__dirname, 'hoc');
     config.resolve.alias['utils'] = path.resolve(__dirname, 'utils');
@@ -25,4 +26,4 @@ module.exports = {
 
     return config;
   }
- }
+})
