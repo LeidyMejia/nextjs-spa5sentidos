@@ -1,0 +1,37 @@
+@import "styles/scss/mixins";
+
+.footer {
+  padding: 2em 0;
+  text-align: center;
+
+  .logo-2 {
+    a {
+      font-size: 48px;
+      font-family: 'Montez', cursive;
+      letter-spacing: 2px;
+
+      span {
+        color: rgba(27, 218, 204, 1);
+      }
+    }
+  }
+}
+
+.copyRightGrids {
+  font-size: 14px;
+
+  span {
+    @include respond-below(md) {
+      display: block;
+    }
+  }
+
+  a {
+    color: #4ecdc4;
+    font-weight: 600;
+
+    &:hover {
+      color: #4ecdc4;
+    }
+  }
+}

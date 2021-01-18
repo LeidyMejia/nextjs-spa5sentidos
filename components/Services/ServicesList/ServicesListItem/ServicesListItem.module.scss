@@ -1,3 +1,5 @@
+@import 'styles/scss/mixins';
+
 .serviceListItem {
   display: flex;
   flex-direction: column;
@@ -23,5 +25,9 @@
   a {
     width: 80%;
     margin-bottom: 10px;
+
+    @include respond-below(lg) {
+      width: 50%
+    }
   }
 }

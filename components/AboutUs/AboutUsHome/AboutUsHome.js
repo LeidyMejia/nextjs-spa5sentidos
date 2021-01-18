@@ -1,6 +1,6 @@
 const AboutUsHome = () => {
   return (
-    <div className="bottom-spas py-5 " id="about">
+    <section className="bottom-spas py-5 " id="about">
       <div className="container py-xl-5 py-lg-3">
         <div className="about-top p-xl-5 p-sm-4 p-3 text-center aboutus-content"
              style={{ backgroundImage: `url(/theme/home/about_us_home.jpg)` }}>
@@ -41,7 +41,7 @@ const AboutUsHome = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

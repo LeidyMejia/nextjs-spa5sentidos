@@ -1,10 +1,10 @@
-import { asset } from "utils";
-import { Link } from 'components';
+import { memo } from 'react';
 import PropTypes from 'prop-types';
-import { translatableProperties } from "utils";
+import { Col, Image, Row } from 'react-bootstrap';
 import useTranslation from "next-translate/useTranslation";
 
-import { Col, Image, Row } from 'react-bootstrap';
+import { Link } from 'components';
+import { asset, translatableProperties } from "utils";
 import { serviceListItem, serviceListItemButtons } from './ServicesListItem.module.scss';
 
 const ServicesListItem = ({ service }) => {
@@ -15,15 +15,15 @@ const ServicesListItem = ({ service }) => {
     <Col sm={6} lg={3} className={serviceListItem} data-testid={'services-item'}>
       <Row>
         <Col xs={12} className={`text-center`}>
-          <Image src={asset(service.images.featured.url)} alt={title} fluid/>
+          <Image src={asset(service.images.featured.url)} alt={title} fluid className={'w-100'}/>
           <h4 className="text-capitalize text-dark mt-3 mb-2">{title}</h4>
-          <p>{summary.slice(0, 250)}</p>
+          <p>{summary.slice(0, 250)}{summary.length > 250 && '...'}</p>
        </Col>
       </Row>
       <Row>
         <Col xs={12} className={`text-center my-3 ${serviceListItemButtons}`}>
-          <Link text={'Request appointment'} color={'primary'}/>
-          <Link text={'See more'} color={'secondary'}/>
+          <Link text={'Book a massage'} color={'primary'}/>
+          <Link text={'Learn more'} color={'secondary'}/>
         </Col>
       </Row>
     </Col>
@@ -47,4 +47,4 @@ ServicesListItem.propTypes = {
   })
 }
 
-export default React.memo(ServicesListItem);
+export default memo(ServicesListItem);

@@ -1,9 +1,11 @@
 export { default as Header } from "./Header/Header";
+export { default as Footer } from "./Footer/Footer";
 export { default as LanguageSwitcher } from "./LanguageSwitcher/LanguageSwitcher";
 export { default as Brand } from "./Brand/Brand";
 export { default as Navigation } from "./Navigation/Navigation";
 export { default as NavigationItem } from "./Navigation/NavigationItem/NavigationItem";
 export { default as Slider } from "./Slider/Slider";
+export { default as InstagramFeed } from "./InstagramFeed/InstagramFeed";
 export { default as SliderCaption } from "./Slider/SliderCaption/SliderCaption";
 export { default as Layout } from "./Layout/Layout";
 export { default as ServicesList } from "./Services/ServicesList/ServicesList";

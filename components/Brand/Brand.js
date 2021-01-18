@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
+
 import styles from './Brand.module.scss'
 
 const Brand = ({ name = '', href = '/' }) => {

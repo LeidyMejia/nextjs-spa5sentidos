@@ -2,14 +2,10 @@ export const querySlidersData = `
 query slidersData {
   sliders {
     id
-    title {
-      es
-      en
-    }
-    subtitle {
-      es
-      en
-    }
+    title_es
+    title_en
+    subtitle_es
+    subtitle_en
     images {
       desktop {
         id

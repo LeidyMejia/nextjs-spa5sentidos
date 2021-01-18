@@ -1,6 +1,13 @@
+@import 'styles/scss/mixins';
 @import "styles/scss/variables";
 
 .languaSwitcher {
+  @include respond-below(lg) {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+  }
+
   > button {
     color: $white;
     font-size: .95rem;
@@ -10,6 +17,12 @@
     border: solid 1px $white;
     text-transform: uppercase;
     box-shadow: 1px 1px 1px #343a4040;
+
+    @include respond-below(lg) {
+      padding: 6px 5px 5px;
+      border: none;
+      background: rgba(27, 218, 204, 0.75);
+    }
 
     &::before {
       display: none !important;
@@ -22,14 +35,29 @@
       background: transparent;
       border: solid 1px $white !important;
       box-shadow: 1px 1px 1px #343a4040;
+
+      @include respond-below(lg) {
+        border: none !important;
+        background: rgba(27, 218, 204, 0.75) !important;
+        padding: 6px 5px 5px;
+        box-shadow: none !important;
+      }
     }
+
+    span {
+      @include respond-below(lg) {
+        display: none;
+      }
+    };
 
     svg {
-      margin-left: .5rem;
-    }
-
-    div {
-      background-color: red !important;
+      @include respond-below(lg) {
+        height: 3em;
+        width: 3em !important;
+      }
+      @include respond-above(lg) {
+        margin-left: .5rem;
+      }
     }
   }
 }
@@ -39,6 +67,10 @@
   color: $white !important;
   background-color: rgba(27, 218, 204, 0.75);
   box-shadow: 1px 2px 2px 1px rgba(12, 12, 12, 0.11);
+
+  @include respond-below(lg) {
+    right: 110% !important;
+  }
 
   button {
     color: $white;

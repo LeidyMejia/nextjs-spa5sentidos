@@ -1,8 +1,13 @@
 @import "styles/scss/variables";
+@import "styles/scss/mixins";
 
 .sliderCaption {
   bottom: 10% !important;
   left: 5% !important;
+
+  @include respond-below(md) {
+    bottom: 5%;
+  }
 }
 
 .sliderLeftSpaBeauty {
@@ -15,6 +20,10 @@
     font-size: 4em;
     font-family: $font-family-montez;
     text-shadow: 1px 2px 2px $dark;
+
+    @include respond-below(md) {
+      font-size: 3em;
+    }
   }
 
   h4 {
@@ -24,6 +33,10 @@
     color: $white !important;
     text-shadow: 1px 1px 1px $dark;
     font-family: $font-family-open-sans;
+
+    @include respond-below(md) {
+      display: none;
+    }
   }
 }
 

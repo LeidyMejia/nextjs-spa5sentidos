@@ -1,14 +1,14 @@
 import graphQLRequest from 'lib/graphql-request'
 import { initializeGraphQL } from "lib/graphql-client"
-import { AboutUsHome, ContactUsFeatured, Layout, ServicesHome } from "components";
+import { ContactUsFeatured, Layout, ServicesHome, InstagramFeed } from "components";
 import { queryHeaderData, querySlidersData, queryServicesHomeData } from "components/queries";
 
 const Home = () => {
   return (
     <Layout>
-      <AboutUsHome />
-      <ContactUsFeatured />
       <ServicesHome />
+      <ContactUsFeatured />
+      <InstagramFeed />
     </Layout>
   );
 }

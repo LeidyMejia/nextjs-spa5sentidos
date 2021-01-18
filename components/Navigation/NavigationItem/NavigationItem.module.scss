@@ -1,12 +1,16 @@
+@import 'styles/scss/mixins';
 @import 'styles/scss/variables';
 
 .navLink {
   color: #212529 !important;
   font-size: 15px;
   font-weight: bold;
-  padding: 26px 20px;
   transition: 0.5s all;
   text-transform: uppercase;
+
+  @include respond-above(lg) {
+    padding: 26px 20px;
+  }
 
   &:hover, &:focus {
     color: #212529;

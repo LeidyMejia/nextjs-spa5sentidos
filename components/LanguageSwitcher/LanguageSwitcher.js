@@ -1,29 +1,27 @@
-import { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import { useRouter } from "next/router";
 import { Dropdown, ButtonGroup } from 'react-bootstrap';
-import { SpanishLanguage, EnglishLanguage } from "components";
+import useTranslation from "next-translate/useTranslation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
-import { languaSwitcher, languaSwitcherMenu } from './LanguageSwitcher.module.scss'
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 
-const LanguageSwitcher = ({ t }) => {
-  const { changeLanguage: onClick, isCurrent } = useI18n();
-  const changeLanguage = async (e, lang) => {
-    e.preventDefault();
-    onClick(lang)
+import { SpanishLanguage, EnglishLanguage } from "components";
+import { languaSwitcher, languaSwitcherMenu } from './LanguageSwitcher.module.scss';
+
+const LanguageSwitcher = () => {
+  const router = useRouter();
+  const { t } = useTranslation('common');
+
+  const changeLanguage = (e, lang) => {
+    router.push('/', '/', { locale: lang })
   }
-
-  const Title = () => (
-    <Fragment>
-      <span>{t('Language')}</span>
-      <FontAwesomeIcon icon={faGlobeAmericas}/>
-    </Fragment>
-  )
 
   return (
     <Dropdown as={ButtonGroup} className={languaSwitcher} drop={'left'}>
       <Dropdown.Toggle id="dropdown-language">
-        <Title />
+        <>
+          <span>{t('Language')}</span>
+          <FontAwesomeIcon icon={faGlobeAmericas}/>
+        </>
       </Dropdown.Toggle>
       <Dropdown.Menu className={languaSwitcherMenu}>
         <Dropdown.Item as="button" onClick={e => changeLanguage(e, 'es')}>
@@ -37,10 +35,6 @@ const LanguageSwitcher = ({ t }) => {
       </Dropdown.Menu>
     </Dropdown>
   )
-}
-
-LanguageSwitcher.propTypes = {
-  t: PropTypes.func.isRequired
 }
 
 export default LanguageSwitcher

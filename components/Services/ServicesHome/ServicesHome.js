@@ -1,9 +1,9 @@
 import { withQuery } from 'hoc';
 import useTranslation from 'next-translate/useTranslation';
 
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { queryServicesHomeData } from "components/queries";
-import { ServicesList as ServicesListComponent } from 'components';
+import { ServicesList as ServicesListComponent, Link } from 'components';
 
 const ServicesList = withQuery(queryServicesHomeData)(ServicesListComponent);
 
@@ -11,12 +11,17 @@ const ServicesHome = () => {
   const { t } = useTranslation('common');
 
   return (
-    <div className="services-beautysls my-5" id="services">
+    <section className="services-beautysls my-5" id="services">
       <Container>
-        <h3 className={`text-capitalize font-weight-bold text-center title mb-sm-5 mb-4`}>{t('Popular Services')}</h3>
+        <h3 className={`text-capitalize font-weight-bold text-center title mb-sm-5 mb-4`}>{t('Popular services')}</h3>
         <ServicesList />
+        <Row>
+          <Col className={'text-center pt-4'}>
+            <Link href={'/services'} color={'primary'} text={'Other services'}/>
+          </Col>
+        </Row>
       </Container>
-    </div>
+    </section>
   )
 };
 

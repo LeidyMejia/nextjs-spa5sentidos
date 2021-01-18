@@ -1,7 +1,13 @@
+@import "styles/scss/mixins";
+
 .slider {
   img {
     opacity: 0;
     max-height: 800px;
+
+    @include respond-below(md) {
+      max-height: 70vh;
+    }
   }
 }
 

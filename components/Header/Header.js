@@ -1,6 +1,7 @@
-import { withQuery } from 'hoc';
 import PropTypes from 'prop-types';
 import { Navbar } from 'react-bootstrap';
+
+import { withQuery } from 'hoc';
 import { queryHeaderData } from './Header.queries';
 import { Brand, Navigation, LanguageSwitcher } from 'components';
 
@@ -11,7 +12,7 @@ const Header = ({ loading, data, error }) => {
   const mainNavigation =  menus.find(menu => menu.machine_name === 'main-navigation');
 
   return (
-    <header className={styles.header}>
+    <div className={styles.header}>
       {(!loading && !error) && (
         <Navbar expand={'lg'} className={styles.headerNavBottom}>
           <Brand name={siteInformation.name} />
@@ -19,7 +20,7 @@ const Header = ({ loading, data, error }) => {
           <LanguageSwitcher />
         </Navbar>
       )}
-    </header>
+    </div>
   )
 };
 
