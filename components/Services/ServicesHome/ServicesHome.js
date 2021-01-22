@@ -1,7 +1,7 @@
 import { withQuery } from 'hoc';
+import { Container, Row, Col } from 'react-bootstrap';
 import useTranslation from 'next-translate/useTranslation';
 
-import { Container, Row, Col } from 'react-bootstrap';
 import { queryServicesHomeData } from "components/queries";
 import { ServicesList as ServicesListComponent, Link } from 'components';
 

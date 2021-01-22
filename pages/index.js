@@ -1,5 +1,6 @@
 import graphQLRequest from 'lib/graphql-request'
 import { initializeGraphQL } from "lib/graphql-client"
+
 import { ContactUsFeatured, Layout, ServicesHome, InstagramFeed } from "components";
 import { queryHeaderData, querySlidersData, queryServicesHomeData } from "components/queries";
 
