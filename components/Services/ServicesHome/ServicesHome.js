@@ -17,7 +17,7 @@ const ServicesHome = () => {
         <ServicesList />
         <Row>
           <Col className={'text-center pt-4'}>
-            <Link href={'/services'} color={'primary'} text={'Other services'}/>
+            <Link href={'/services'} color={'primary'} text={'Other services'} className={'w-sm-100'}/>
           </Col>
         </Row>
       </Container>

@@ -4,12 +4,12 @@ import useTranslation from "next-translate/useTranslation";
 
 import styles, { linkComponent } from './Link.module.scss';
 
-const LinkComponent = ({ text = '', color, href = '/#', target = '_SELF' }) => {
+const LinkComponent = ({ text = '', color, href = '/#', target = '_SELF', className = '' }) => {
   const { t } = useTranslation('common');
 
   return (
     <Link href={href} target={target}>
-      <a className={`${linkComponent} ${styles[color]} btn btn-sm`}>{ t(text) }</a>
+      <a className={`${linkComponent} ${styles[color]} ${className} btn btn-sm`}>{ t(text) }</a>
     </Link>
   )
 }

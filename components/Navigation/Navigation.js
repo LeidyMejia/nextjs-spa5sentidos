@@ -9,7 +9,7 @@ const Navigation = ({ navigation, isToggle = true }) => {
       { isToggle && <Navbar.Toggle aria-controls={navigation.id} /> }
       <Navbar.Collapse id={navigation.id}>
         <Nav className={"ml-auto text-center mt-lg-0 mt-3"}>
-          {navigation.items.map(item => <NavigationItem {...item} key={item.id}/>)}
+          {navigation.items.map(item => <NavigationItem item={item} key={item.id}/>)}
         </Nav>
       </Navbar.Collapse>
     </>

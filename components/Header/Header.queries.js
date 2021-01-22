@@ -8,14 +8,10 @@ query header{
     machine_name
     items {
       id
-      label {
-        es
-        en
-      }
-      url {
-        es
-        en
-      }
+      label_es
+      label_en
+      url_es
+      url_en
     }
   }
    siteInformation {
