@@ -7,7 +7,7 @@ const InstagramFeed = () => {
 
   return (
     <>
-      <Container fluid as={'section'} className={'mt-5'}>
+      <Container fluid={'xl'} as={'section'} className={'mt-5'}>
         <h3 className="text-capitalize font-weight-bold text-center title mb-sm-5 mb-4">
           { t('Follow us on Instagram') }
         </h3>
