@@ -1,24 +1,23 @@
-@import 'styles/scss/variables';
-@import 'styles/scss/mixins';
+@import 'styles/scss/mixins', 'styles/scss/variables', 'styles/scss/functions';
 
 .brand {
   padding: 0;
   cursor: pointer;
-  font-size: 48px;
   letter-spacing: 2px;
-  text-shadow: 1px 1px 2px $dark;
+  font-size: $font-size-base * 3;
   font-family: $font-family-montez;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: text-color('white') !important;
+  text-shadow: 1px 1px 2px text-color('dark');
 
   @include respond-below(sm) {
-    font-size: 40px;
+    font-size: $font-size-base * 2.5;
   }
 
   &:hover, &:focus {
-    color: rgba(255, 255, 255, 0.9);
+    color: text-color('white');
   }
 
   span {
-    color: rgba(0, 0, 0, 0.9);
+    color: text-color('dark');
   }
 }

@@ -1,3 +1,5 @@
+@import 'styles/scss/mixins', 'styles/scss/variables', 'styles/scss/functions';
+
 .contactUsFeatured {
   background-size: cover;
   background-position: center;
@@ -6,7 +8,7 @@
 
 .contactUsFeaturedTitle {
   letter-spacing: 2px;
-  font-size: 40px;
   font-style: italic;
+  font-size: $font-size-base * 2.5;
   text-shadow: 4px 4px 9px rgba(0, 0, 0, 0.48);
 }

@@ -1,24 +1,24 @@
-@import "styles/scss/mixins";
+@import 'styles/scss/mixins', 'styles/scss/variables', 'styles/scss/functions';
 
 .footer {
-  padding: 2em 0;
   text-align: center;
+  padding: ($padding-base * 2) 0;
 
   .logo-2 {
     a {
-      font-size: 48px;
-      font-family: 'Montez', cursive;
       letter-spacing: 2px;
+      font-size: $font-size-base * 3;
+      font-family: $font-family-montez;
 
       span {
-        color: rgba(27, 218, 204, 1);
+        color: text-color('primary');
       }
     }
   }
 }
 
 .copyRightGrids {
-  font-size: 14px;
+  font-size: $font-size-base * .9;
 
   span {
     @include respond-below(md) {
@@ -27,11 +27,11 @@
   }
 
   a {
-    color: #4ecdc4;
     font-weight: 600;
+    color: text-color('primary');
 
     &:hover {
-      color: #4ecdc4;
+      color: text-color('dark');
     }
   }
 }

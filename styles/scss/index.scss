@@ -1,11 +1,13 @@
-/* import bootstrap to set changes */
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-
 /* Override bootsrap default */
 @import "font";
 @import "variables";
 @import "mixins";
 @import "globals";
+@import 'functions';
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 
 @import "~bootstrap/scss/bootstrap";
+

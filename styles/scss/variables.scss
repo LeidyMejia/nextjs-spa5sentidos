@@ -5,10 +5,27 @@ $primary: #1bdacc;
 $secondary: #b5b5b5;
 
 $theme-colors: (
-  primary: #1bdacc,
-  secondary: #b5b5b5,
+  "white": $white,
+  "primary": $primary,
+  "secondary": $secondary,
+  "white-transparent": rgb(255, 255, 255, .55),
+  "primary-transparent": rgb(27, 218, 204, .75),
 );
+
+$text-colors: (
+  "dark": #212529,
+  "white": $white,
+  "primary": $primary,
+);
+
+$hovers: (
+  "main-menu-item": rgb(255 255 255 / 53%)
+);
+
+$margin-base: 1rem;
+$padding-base: 1rem;
 
 $font-family-montez: 'Montez', cursive;
 $font-family-open-sans: 'Open Sans', sans-serif;
 $font-family-paytone-one: 'Paytone One', sans-serif;
+

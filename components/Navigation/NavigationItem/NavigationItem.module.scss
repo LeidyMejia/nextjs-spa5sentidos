@@ -1,25 +1,24 @@
-@import 'styles/scss/mixins';
-@import 'styles/scss/variables';
+@import 'styles/scss/mixins', 'styles/scss/variables', 'styles/scss/functions';
 
 .navLink {
-  color: #212529 !important;
-  font-size: 15px;
   font-weight: bold;
   transition: 0.5s all;
   text-transform: uppercase;
+  font-size: $font-size-base * .95;
+  color: text-color('dark') !important;
 
   @include respond-above(lg) {
-    padding: 26px 20px;
+    padding: $padding-base * 1.625 $padding-base * 1.25;
   }
 
   &:hover, &:focus {
-    color: #212529;
-    background: rgb(255 255 255 / 53%);
     transition: 0.5s all;
+    color: text-color('dark');
+    background: hover('main-menu-item');
   }
 
   &.show, &.active {
-    color: #212529;
-    background: rgb(255 255 255 / 53%);
+    color: text-color('dark');
+    background: hover('main-menu-item');
   }
 }

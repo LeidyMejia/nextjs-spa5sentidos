@@ -1,4 +1,4 @@
-@import 'styles/scss/mixins';
+@import 'styles/scss/mixins', 'styles/scss/variables', 'styles/scss/functions';
 
 .serviceListItem {
   display: flex;
@@ -6,9 +6,9 @@
   justify-content: space-between;
 
   h4 {
-    font-size: 1.35em;
+    min-height: 2.2rem;
     letter-spacing: 1px;
-    min-height: 2.2em;
+    font-size: $font-size-base * 1.35;
   }
 
   p {
@@ -18,13 +18,13 @@
 
 .serviceListItemButtons {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
 
   a {
     width: 80%;
-    margin-bottom: 10px;
+    margin-bottom: $margin-base * .625;
 
     @include respond-below(lg) {
       width: 50%
