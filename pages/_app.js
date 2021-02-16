@@ -2,7 +2,7 @@
  * @import context
  * @import global styles sheet
  */
-import './../styles/scss/index.scss';
+import 'styles/scss/index.scss';
 import { AppProvider } from 'context';
 import { ClientContext } from 'graphql-hooks';
 import { useGraphQLClient } from 'lib/graphql-client';
@@ -22,9 +22,7 @@ const App = ({ Component, pageProps }) => {
 App.getInitialProps = async ({ Component, ctx }) => {
   let pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
 
-  return {
-    pageProps
-  }
+  return { pageProps }
 }
 
 export default App;

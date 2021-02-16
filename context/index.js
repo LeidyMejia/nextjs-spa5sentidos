@@ -1,1 +1,1 @@
-export { useApp, useDispatchApp, AppProvider } from './app/App';
+export { default as AppProvider } from './App/App';
