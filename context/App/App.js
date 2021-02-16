@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useContext } from 'react';
 
 const defaultAppState = {
   siteName: '',
@@ -8,7 +8,7 @@ const defaultAppState = {
   siteDescription: '',
 };
 
-const AppDataContext = createContext(defaultAppState);
+const AppContext = createContext(defaultAppState);
 const AppDispatchContext = createContext(() => {});
 
 const init = (initialState) => {
@@ -24,16 +24,17 @@ const appReducer = (state, { type, payload }) => {
   }
 }
 
-const AppProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, defaultAppState, init);
 
   return (
-    <AppDataContext.Provider value={state}>
+    <AppContext.Provider value={state}>
       <AppDispatchContext.Provider value={dispatch}>
         { children }
       </AppDispatchContext.Provider>
-    </AppDataContext.Provider>
+    </AppContext.Provider>
   )
 }
 
-export default AppProvider;
+export const useApp = () => useContext(AppContext);
+export const useDispatchApp = () => useContext(AppDispatchContext);
