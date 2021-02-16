@@ -1,19 +1,25 @@
+/**
+ * @import context
+ * @import global styles sheet
+ */
+import './../styles/scss/index.scss';
+import { AppProvider } from 'context';
 import { ClientContext } from 'graphql-hooks';
 import { useGraphQLClient } from 'lib/graphql-client';
 
-import "../styles/scss/index.scss";
-
-const CustomApp = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }) => {
   const graphQLClient = useGraphQLClient(pageProps.initialGraphQLState);
 
   return (
     <ClientContext.Provider value={graphQLClient}>
-      <Component {...pageProps} />
+      <AppProvider>
+        <Component {...pageProps} />
+      </AppProvider>
     </ClientContext.Provider>
   );
 }
 
-CustomApp.getInitialProps = async ({ Component, ctx }) => {
+App.getInitialProps = async ({ Component, ctx }) => {
   let pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
 
   return {
@@ -21,4 +27,4 @@ CustomApp.getInitialProps = async ({ Component, ctx }) => {
   }
 }
 
-export default CustomApp
+export default App;
