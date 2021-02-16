@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { ServicesListItem } from 'components';
 
 const ServicesList = ({ loading, data = {}, error }) => {
@@ -12,4 +13,4 @@ const ServicesList = ({ loading, data = {}, error }) => {
   )
 };
 
-export default React.memo(ServicesList);
+export default memo(ServicesList);
