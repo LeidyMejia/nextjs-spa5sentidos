@@ -1,4 +1,4 @@
-import { Header, Slider, Footer } from 'components';
+import { Header, Slider, Footer, Social } from 'components';
 
 const Layout = ({ children }) => {
   return (
@@ -7,8 +7,9 @@ const Layout = ({ children }) => {
         <Header />
         <Slider prop1={'prop1'}/>
       </header>
-      <div id={'app'}>
+      <div id={'App'}>
         {children}
+        <Social />
       </div>
       <Footer />
     </>

@@ -1,10 +1,14 @@
-import graphQLRequest from 'lib/graphql-request'
-import { initializeGraphQL } from "lib/graphql-client"
+import dynamic from 'next/dynamic';
+import graphQLRequest from 'lib/graphql-request';
+import { initializeGraphQL } from 'lib/graphql-client';
+import { ContactUsFeatured, Layout, ServicesHome } from 'components';
+import { queryHeaderData, querySlidersData, queryServicesHomeData } from 'components/queries';
 
-import { ContactUsFeatured, Layout, ServicesHome, InstagramFeed } from "components";
-import { queryHeaderData, querySlidersData, queryServicesHomeData } from "components/queries";
+const InstagramFeed = dynamic(
+  () => import('components').then(components => components.InstagramFeed), { ssr: false }
+);
 
-const Home = () => {
+const HomePage = () => {
   return (
     <Layout>
       <ServicesHome />
@@ -14,7 +18,7 @@ const Home = () => {
   );
 }
 
-Home.getInitialProps = async () => {
+HomePage.getInitialProps = async () => {
   const client = initializeGraphQL();
   await graphQLRequest(client, queryHeaderData);
   await graphQLRequest(client, querySlidersData);
@@ -26,4 +30,4 @@ Home.getInitialProps = async () => {
   }
 }
 
-export default Home
+export default HomePage;

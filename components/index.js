@@ -7,6 +7,7 @@ export { default as NavigationItem } from "./Navigation/NavigationItem/Navigatio
 export { default as Slider } from "./Slider/Slider";
 export { default as InstagramFeed } from "./InstagramFeed/InstagramFeed";
 export { default as SliderCaption } from "./Slider/SliderCaption/SliderCaption";
+export { default as Social } from "./Social/Social";
 export { default as Layout } from "./Layout/Layout";
 export { default as ServicesList } from "./Services/ServicesList/ServicesList";
 export { default as ServicesListItem } from "./Services/ServicesList/ServicesListItem/ServicesListItem";
@@ -14,6 +15,4 @@ export { default as ServicesHome } from "./Services/ServicesHome/ServicesHome";
 export { default as SpanishLanguage } from "./Utils/Svg/SpanishLanguage/SpanishLanguage";
 export { default as EnglishLanguage } from "./Utils/Svg/EnglishLanguage/EnglishLanguage";
 export { default as ContactUsFeatured } from "./ContactUs/ContactUsFeatured/ContactUsFeatured";
-export { default as AboutUsHome } from "./AboutUs/AboutUsHome/AboutUsHome";
-export { default as Button } from "./Common/Button/Button";
 export { default as Link } from "./Common/Link/Link";
