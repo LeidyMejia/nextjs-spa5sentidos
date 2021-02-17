@@ -13,7 +13,7 @@ const ServicesHome = () => {
   return (
     <section className="services-beautysls my-5" id="services">
       <Container>
-        <h3 className={`text-capitalize font-weight-bold text-center title mb-sm-5 mb-4`}>{t('Popular services')}</h3>
+        <h2 className={`text-capitalize font-weight-bold text-center title mb-sm-5 mb-4`}>{t('Popular services')}</h2>
         <ServicesList />
         <Row>
           <Col className={'text-center pt-4'}>

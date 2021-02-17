@@ -10,9 +10,9 @@ const InstagramFeed = () => {
   return (
     <>
       <Container fluid={'xl'} as={'section'} className={'mt-5'} >
-        <h3 className="text-capitalize font-weight-bold text-center title mb-sm-5 mb-4" ref={ref}>
+        <h2 className="text-capitalize font-weight-bold text-center title mb-sm-5 mb-4" ref={ref}>
           { t('Follow us on Instagram') }
-        </h3>
+        </h2>
         <Row>
           <Col>
             { show ? <div className="elfsight-app-cbdcfb04-79f1-478c-b662-23542ada80d4"/> : null }
