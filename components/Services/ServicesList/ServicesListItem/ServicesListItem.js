@@ -22,7 +22,7 @@ const ServicesListItem = ({ service }) => {
             quality={85}
             src={asset(service.images.featured.url)}
           />
-          <h4 className="text-capitalize text-dark mt-3 mb-2">{title}</h4>
+          <h3 className="text-capitalize text-dark mt-3 mb-2">{title}</h3>
           <p>{summary.slice(0, 250)}{summary.length > 250 && '...'}</p>
        </Col>
       </Row>

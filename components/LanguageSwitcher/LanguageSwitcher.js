@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
 
   return (
     <Dropdown as={ButtonGroup} className={languaSwitcher} drop={'left'}>
-      <Dropdown.Toggle id="dropdown-language">
+      <Dropdown.Toggle id="dropdown-language" aria-label={t('Language')}>
         <>
           <span>{t('Language')}</span>
           <FontAwesomeIcon icon={faGlobeAmericas}/>

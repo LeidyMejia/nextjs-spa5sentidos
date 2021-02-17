@@ -22,7 +22,7 @@ const Footer = () => {
           </p>
           <p className={copyRightGrids}>
             { t('Development by') } &nbsp;
-            <a href="https://www.linkedin.com/in/smarulanda97" target="_blank">@smarulanda97.</a>
+            <a href="https://www.linkedin.com/in/smarulanda97" target="_blank"  rel="noopener">@smarulanda97.</a>
           </p>
         </div>
       </Container>
