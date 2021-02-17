@@ -1,10 +1,10 @@
 import { memo } from 'react';
-import PropTypes from 'prop-types';
-import { Col, Image, Row } from 'react-bootstrap';
-import useTranslation from "next-translate/useTranslation";
-
+import Image from 'next/image';
 import { Link } from 'components';
-import { asset, translatableProperties } from "utils";
+import PropTypes from 'prop-types';
+import { Col, Row } from 'react-bootstrap';
+import { asset, translatableProperties } from 'utils';
+import useTranslation from 'next-translate/useTranslation';
 import { serviceListItem, serviceListItemButtons } from './ServicesListItem.module.scss';
 
 const ServicesListItem = ({ service }) => {
@@ -15,7 +15,13 @@ const ServicesListItem = ({ service }) => {
     <Col sm={6} lg={3} className={serviceListItem} data-testid={'services-item'}>
       <Row>
         <Col xs={12} className={`text-center`}>
-          <Image src={asset(service.images.featured.url)} alt={title} fluid className={'w-100'}/>
+          <Image
+            alt={title}
+            width={300}
+            height={200}
+            quality={85}
+            src={asset(service.images.featured.url)}
+          />
           <h4 className="text-capitalize text-dark mt-3 mb-2">{title}</h4>
           <p>{summary.slice(0, 250)}{summary.length > 250 && '...'}</p>
        </Col>

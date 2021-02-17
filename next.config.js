@@ -12,6 +12,9 @@ module.exports = nextTranslate({
   publicRuntimeConfig: {
     API_URL: process.env.API_URL,
   },
+  images: {
+    domains: ['localhost']
+  },
   webpack: (config, { isServer, webpack }) => {
     config.resolve.alias['lib'] = path.resolve(__dirname, 'lib');
     config.resolve.alias['hoc'] = path.resolve(__dirname, 'hoc');
