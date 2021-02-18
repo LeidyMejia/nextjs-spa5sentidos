@@ -5,6 +5,16 @@ import useTranslation from 'next-translate/useTranslation';
 const InstagramFeed = () => {
   const { t } = useTranslation('common');
 
+  const handleLoadScript = () => {
+    const interval = setInterval(() => {
+      const buttonFreeWidget = document.querySelector('.eapps-link');
+      if (buttonFreeWidget) {
+        buttonFreeWidget.remove();
+        clearInterval(interval);
+      }
+    }, 1000);
+  }
+
   return (
     <>
       <Container fluid={'xl'} as={'section'} className={'mt-5'}>
@@ -17,7 +27,10 @@ const InstagramFeed = () => {
           </Col>
         </Row>
       </Container>
-      <Script url="https://apps.elfsight.com/p/platform.js"/>
+      <Script
+        onLoad={handleLoadScript}
+        url="https://apps.elfsight.com/p/platform.js"
+      />
     </>
   )
 }
