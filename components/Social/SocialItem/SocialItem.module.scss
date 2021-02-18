@@ -1,0 +1,24 @@
+.socialItem {
+  margin: 0 5px;
+}
+
+.socialItemLink {
+  width: 39px;
+  height: 39px;
+  padding: 4px;
+  color: #D7D0BE;
+  font-size: 13px;
+  transition: .5s;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px dashed #777;
+  background-clip: content-box;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    color: #fff;
+    transform: translateX(0px) rotate(360deg);
+  }
+}

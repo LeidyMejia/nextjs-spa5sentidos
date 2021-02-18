@@ -3,7 +3,6 @@
  * @import global styles sheet
  */
 import 'styles/scss/index.scss';
-import { AppProvider } from 'context';
 import { ClientContext } from 'graphql-hooks';
 import { useGraphQLClient } from 'lib/graphql-client';
 
@@ -12,9 +11,7 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <ClientContext.Provider value={graphQLClient}>
-      <AppProvider>
-        <Component {...pageProps} />
-      </AppProvider>
+      <Component {...pageProps} />
     </ClientContext.Provider>
   );
 }

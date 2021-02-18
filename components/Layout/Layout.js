@@ -1,6 +1,12 @@
-import { Header, Slider, Footer, Social } from 'components';
+import { memo } from 'react';
+import { withQuery } from 'hoc';
+import { queryLayoutData } from 'components/queries';
+import { Header, Slider, Footer, LanguageSwitcher } from 'components';
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+  const { children, data } = props;
+  const [socialMenu] = data.socialMenu;
+
   return (
     <>
       <header className={'header'}>
@@ -9,11 +15,13 @@ const Layout = ({ children }) => {
       </header>
       <main id={'main-content'}>
         {children}
-        <Social />
       </main>
-      <Footer />
+      <LanguageSwitcher />
+      <Footer socialMenu={socialMenu}/>
     </>
   );
 };
 
-export default Layout;
+const LayoutMemo = memo(Layout);
+
+export default withQuery(queryLayoutData)(LayoutMemo);

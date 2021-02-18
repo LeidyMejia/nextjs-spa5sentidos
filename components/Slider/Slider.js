@@ -19,7 +19,6 @@ const Slider = ({ loading, error, data }) => {
         const { url: imageUrl } = isMobile ? images.mobile : images.desktop;
         const { title, subtitle } = translatableProperties(slide, lang, ['title', 'subtitle'])
 
-        console.log(isMobile)
         return (
           <Carousel.Item key={id}>
             <div className={sliderBackground} style={{ backgroundImage: `url('${asset(imageUrl)}')`}}>

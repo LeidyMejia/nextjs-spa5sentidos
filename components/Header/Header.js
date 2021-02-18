@@ -1,23 +1,26 @@
+
+import { memo } from 'react';
+import { withQuery } from 'hoc';
 import PropTypes from 'prop-types';
 import { Navbar } from 'react-bootstrap';
-
-import { withQuery } from 'hoc';
 import { queryHeaderData } from './Header.queries';
-import { Brand, Navigation, LanguageSwitcher } from 'components';
+import { Brand, Navigation, Social } from 'components';
 
 import styles from './Header.module.scss'
 
 const Header = ({ loading, data, error }) => {
-  const { siteInformation = {}, menus = [] } = data;
-  const mainNavigation =  menus.find(menu => menu.machine_name === 'main-navigation');
+  const { siteInformation = {} } = data;
+  const [socialMenu] = data.socialMenu;
+  const [mainNavigation] =  data.mainNavigation;
 
   return (
     <div className={styles.header}>
       {(!loading && !error) && (
         <Navbar expand={'lg'} className={styles.headerNavBottom}>
           <Brand name={siteInformation.name} />
-          <Navigation navigation={mainNavigation}/>
-          <LanguageSwitcher />
+          <Navigation navigation={mainNavigation}>
+            <Social menu={socialMenu}/>
+          </Navigation>
         </Navbar>
       )}
     </div>
@@ -30,4 +33,4 @@ Header.propTypes = {
   error: PropTypes.any,
 }
 
-export default withQuery(queryHeaderData)(Header);
+export default withQuery(queryHeaderData)(memo(Header));

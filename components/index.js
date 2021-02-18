@@ -9,6 +9,7 @@ export { default as Slider } from "./Slider/Slider";
 export { default as InstagramFeed } from "./InstagramFeed/InstagramFeed";
 export { default as SliderCaption } from "./Slider/SliderCaption/SliderCaption";
 export { default as Social } from "./Social/Social";
+export { default as SocialItem } from "./Social/SocialItem/SocialItem";
 export { default as Layout } from "./Layout/Layout";
 export { default as ServicesList } from "./Services/ServicesList/ServicesList";
 export { default as ServicesListItem } from "./Services/ServicesList/ServicesListItem/ServicesListItem";

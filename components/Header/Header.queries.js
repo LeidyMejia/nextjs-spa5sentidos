@@ -1,6 +1,6 @@
 export const queryHeaderData = `
 query header{
-  menus (where: {
+  mainNavigation: menus (where: {
     machine_name: "main-navigation"
   }) {
     id
@@ -19,5 +19,22 @@ query header{
     name
     slogan
   }
+  socialMenu: menus(where: {
+      machine_name: "social-navigation"
+    }) {
+      id
+      items {
+        id
+        label_es
+        label_en
+        url_es
+        url_en
+        icon {
+          name
+          ext
+          url
+        }
+      }
+    }
 }
 `
