@@ -1,3 +1,4 @@
+export { queryAppData } from './App/App.queries';
 export { queryHeaderData } from './Header/Header.queries';
 export { querySlidersData } from './Slider/Slider.queries';
 export { queryAboutUsHomeData } from './AboutUs/AboutUsHome/AboutUsHome.queries';

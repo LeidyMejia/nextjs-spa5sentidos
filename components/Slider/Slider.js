@@ -1,11 +1,11 @@
 import { memo } from 'react';
-import { Carousel } from 'react-bootstrap';
-import useTranslation from "next-translate/useTranslation";
-
-import { withQuery } from "hoc";
+import { withQuery } from 'hoc';
 import { SliderCaption } from 'components';
+import { Carousel } from 'react-bootstrap';
+import { isMobile } from 'react-device-detect';
 import { querySlidersData } from './Slider.queries';
 import { asset, translatableProperties } from 'utils';
+import useTranslation from 'next-translate/useTranslation';
 import { slider, sliderBackground, sliderBackgroundLayer } from './Slider.module.scss';
 
 const Slider = ({ loading, error, data }) => {
@@ -16,14 +16,16 @@ const Slider = ({ loading, error, data }) => {
     <Carousel indicators={false} className={slider}>
       {!loading && !error && sliders.map(slide => {
         const { images, id } = slide;
+        const { url: imageUrl } = isMobile ? images.mobile : images.desktop;
         const { title, subtitle } = translatableProperties(slide, lang, ['title', 'subtitle'])
 
+        console.log(isMobile)
         return (
           <Carousel.Item key={id}>
-            <div className={sliderBackground} style={{ backgroundImage: `url("${asset(images.desktop.url)}")`}}>
+            <div className={sliderBackground} style={{ backgroundImage: `url('${asset(imageUrl)}')`}}>
               <div className={sliderBackgroundLayer} />
             </div>
-            <img alt={title} className={"carousel-img"} src={asset(images.desktop.url)}/>
+            <img alt={title} className={'carousel-img'} src={asset(imageUrl)}/>
             <SliderCaption title={title} subtitle={subtitle} pathname={'/'}/>
           </Carousel.Item>
         )

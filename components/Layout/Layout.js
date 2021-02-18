@@ -7,10 +7,10 @@ const Layout = ({ children }) => {
         <Header />
         <Slider prop1={'prop1'}/>
       </header>
-      <div id={'App'}>
+      <main id={'main-content'}>
         {children}
         <Social />
-      </div>
+      </main>
       <Footer />
     </>
   );

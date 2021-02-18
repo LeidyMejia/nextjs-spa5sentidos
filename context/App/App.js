@@ -1,27 +1,17 @@
 import React, { createContext, useReducer, useContext } from 'react';
+import { appReducer, defaultAppState } from 'context/App/appReducer';
 
-const defaultAppState = {
-  siteName: '',
-  siteTitle: '',
-  siteOwners: [],
-  siteBaseUrl: '',
-  siteDescription: '',
-};
-
+/**
+ *
+ * Create context
+ * AppContext is a context with the global state of App
+ * AppDispatchContext is a context with a dispatch to modify the state from another components
+ */
 const AppContext = createContext(defaultAppState);
 const AppDispatchContext = createContext(() => {});
 
 const init = (initialState) => {
   return {...initialState}
-}
-
-const appReducer = (state, { type, payload }) => {
-  switch (type) {
-    case 'add':
-      return {...state, payload };
-    default:
-      throw new Error(`Unhandled type ${type}`);
-  }
 }
 
 export const AppProvider = ({ children }) => {

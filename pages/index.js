@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import graphQLRequest from 'lib/graphql-request';
 import { initializeGraphQL } from 'lib/graphql-client';
-import { ContactUsFeatured, Layout, ServicesHome } from 'components';
+import { App, ContactUsFeatured, ServicesHome } from 'components';
 import { queryHeaderData, querySlidersData, queryServicesHomeData } from 'components/queries';
 
 const InstagramFeed = dynamic(
@@ -10,11 +10,11 @@ const InstagramFeed = dynamic(
 
 const HomePage = () => {
   return (
-    <Layout>
+    <App layout={true}>
       <ServicesHome />
       <ContactUsFeatured />
       <InstagramFeed />
-    </Layout>
+    </App>
   );
 }
 
