@@ -61,4 +61,24 @@ body {
     padding: 0;
   }
 
+  .header {
+    .social-menu {
+      a {
+        width: 37px !important;
+        height: 37px !important;
+      }
+    }
+  }
+
+  .footer {
+    .social-menu {
+      margin: 1rem 0;
+
+      a {
+        width: 42px !important;
+        height: 42px !important;
+      }
+    }
+  }
+
 }

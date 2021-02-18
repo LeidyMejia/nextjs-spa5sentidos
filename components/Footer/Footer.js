@@ -8,7 +8,7 @@ const Footer = ({ socialMenu }) => {
   const { t } = useTranslation('common');
 
   return (
-    <footer className={footer}>
+    <footer className={`${footer} footer`}>
       <Container>
         <div className="footer-posi-spasinfo">
           <Social menu={socialMenu} />

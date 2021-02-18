@@ -5,7 +5,7 @@ import { socialList } from './Social.module.scss';
 
 const Social = ({ menu }) => {
   return (
-    <div className={`${socialList}`}>
+    <div className={`${socialList} social-menu`}>
       <ul>
         {menu.items.map(item => <SocialItem item={item} key={item.id} />)}
       </ul>
