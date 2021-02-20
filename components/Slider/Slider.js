@@ -3,7 +3,7 @@ import { withQuery } from 'hoc';
 import { Carousel } from 'react-bootstrap';
 import { SliderCaption } from 'components';
 import { isMobile } from 'react-device-detect';
-import { querySlidersData } from './Slider.queries';
+import { querySlidersData } from './slider.queries';
 import { asset, translatableProperties } from 'utils';
 import useTranslation from 'next-translate/useTranslation';
 import { slider, sliderItem, sliderBackgroundLayer } from './slider.module.scss';

@@ -3,7 +3,7 @@ import { withQuery } from 'hoc';
 import PropTypes from 'prop-types';
 import { Navbar } from 'react-bootstrap';
 import styles from './header.module.scss';
-import { queryHeaderData } from './Header.queries';
+import { queryHeaderData } from './header.queries';
 import { Brand, Navigation, Social } from 'components';
 
 const Header = ({ loading, data, error }) => {
