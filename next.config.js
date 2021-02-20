@@ -22,7 +22,6 @@ module.exports = nextTranslate({
     config.resolve.alias['hooks'] = path.resolve(__dirname, 'hooks');
     config.resolve.alias['public'] = path.resolve(__dirname, 'public');
     config.resolve.alias['styles'] = path.resolve(__dirname, 'styles');
-    config.resolve.alias['context'] = path.resolve(__dirname, 'context');
     config.resolve.alias['components'] = path.resolve(__dirname, 'components');
 
     return config;
