@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import useTranslation from "next-translate/useTranslation";
 
-import styles, { linkComponent } from './Link.module.scss';
+import styles, { linkComponent } from './link.module.scss';
 
 const LinkComponent = ({ text = '', color, href = '/#', target = '_SELF', className = '' }) => {
   const { t } = useTranslation('common');

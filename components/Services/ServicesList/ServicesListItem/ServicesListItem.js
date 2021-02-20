@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Col, Row } from 'react-bootstrap';
 import { asset, translatableProperties } from 'utils';
 import useTranslation from 'next-translate/useTranslation';
-import { serviceListItem, serviceListItemButtons } from './ServicesListItem.module.scss';
+import { serviceListItem, serviceListItemButtons } from './servicesListItem.module.scss';
 
 const ServicesListItem = ({ service }) => {
   const { lang } = useTranslation();

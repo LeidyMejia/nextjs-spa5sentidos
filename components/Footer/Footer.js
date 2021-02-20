@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Social } from 'components';
 import { Container } from 'react-bootstrap';
 import useTranslation from 'next-translate/useTranslation';
-import { footer, copyRightGrids } from './Footer.module.scss';
+import { footer, copyRightGrids } from './footer.module.scss';
 
 const Footer = ({ socialMenu }) => {
   const { t } = useTranslation('common');

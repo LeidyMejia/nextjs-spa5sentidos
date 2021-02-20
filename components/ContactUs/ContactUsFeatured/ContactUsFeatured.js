@@ -1,6 +1,6 @@
 import { Link } from 'components';
 import { Container } from 'react-bootstrap';
-import { contactUsFeatured, contactUsFeaturedTitle } from './ContactUsFeatured.module.scss';
+import { contactUsFeatured, contactUsFeaturedTitle } from './contactUsFeatured.module.scss';
 
 const ContactUsFeatured = ({ image = `/theme/home/bg3.jpg` }) => {
   return (

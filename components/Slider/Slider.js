@@ -1,12 +1,12 @@
 import { memo } from 'react';
 import { withQuery } from 'hoc';
-import { SliderCaption } from 'components';
 import { Carousel } from 'react-bootstrap';
+import { SliderCaption } from 'components';
 import { isMobile } from 'react-device-detect';
 import { querySlidersData } from './Slider.queries';
 import { asset, translatableProperties } from 'utils';
 import useTranslation from 'next-translate/useTranslation';
-import { slider, sliderBackground, sliderBackgroundLayer } from './Slider.module.scss';
+import { slider, sliderItem, sliderBackgroundLayer } from './slider.module.scss';
 
 const Slider = ({ loading, error, data }) => {
   const { sliders = [] } = data;
@@ -20,10 +20,8 @@ const Slider = ({ loading, error, data }) => {
         const { title, subtitle } = translatableProperties(slide, lang, ['title', 'subtitle'])
 
         return (
-          <Carousel.Item key={id}>
-            <div className={sliderBackground} style={{ backgroundImage: `url('${asset(imageUrl)}')`}}>
-              <div className={sliderBackgroundLayer} />
-            </div>
+          <Carousel.Item key={id} className={sliderItem}>
+            <div className={sliderBackgroundLayer} />
             <img alt={title} className={'carousel-img'} src={asset(imageUrl)}/>
             <SliderCaption title={title} subtitle={subtitle} pathname={'/'}/>
           </Carousel.Item>

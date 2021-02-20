@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Carousel } from "react-bootstrap";
 
-import styled, { sliderBubbles } from "./SliderCaption.module.scss";
+import styled, { sliderBubbles } from "./sliderCaption.module.scss";
 
 const SliderCaption = ({ title, subtitle, pathname }) => (
   <Carousel.Caption className={styled.sliderCaption}>

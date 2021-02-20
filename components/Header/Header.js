@@ -1,12 +1,10 @@
-
 import { memo } from 'react';
 import { withQuery } from 'hoc';
 import PropTypes from 'prop-types';
 import { Navbar } from 'react-bootstrap';
+import styles from './header.module.scss';
 import { queryHeaderData } from './Header.queries';
 import { Brand, Navigation, Social } from 'components';
-
-import styles from './Header.module.scss'
 
 const Header = ({ loading, data, error }) => {
   const { siteInformation = {} } = data;

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 
 import { SpanishLanguage, EnglishLanguage } from "components";
-import { languaSwitcher, languaSwitcherMenu } from './LanguageSwitcher.module.scss';
+import { languaSwitcher, languaSwitcherMenu } from './languageSwitcher.module.scss';
 
 const LanguageSwitcher = () => {
   const router = useRouter();

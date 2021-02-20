@@ -1,9 +1,13 @@
 @import 'styles/scss/mixins', 'styles/scss/variables', 'styles/scss/functions';
 
 .sliderCaption {
-  bottom: 10% !important;
-  left: 5% !important;
+  left: 5%;
+  bottom: 10%;
 
+  @include respond-below(sm) {
+    right: 5%;
+    text-align: center
+  }
   @include respond-below(md) {
     bottom: 5%;
   }

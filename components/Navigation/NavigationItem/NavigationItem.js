@@ -4,7 +4,7 @@ import { Nav } from 'react-bootstrap';
 import useTranslation from "next-translate/useTranslation";
 
 import { translatableProperties } from "utils";
-import styled from './NavigationItem.module.scss';
+import styled from './navigationItem.module.scss';
 
 const NavigationItem = ({ item }) => {
   const { lang } = useTranslation();

@@ -2,21 +2,24 @@
 
 .slider {
   img {
-    opacity: 0;
-    max-height: 800px;
+    width: 100%;
+    object-fit: cover;
 
-    @include respond-below(md) {
-      max-height: 70vh;
+    @include respond-below(lg) {
+      height: 100%;
     }
   }
 }
 
-.sliderBackground {
-  width: 100%;
-  min-height: 800px;
-  position: absolute;
-  background-size: cover;
-  background-position: center;
+.sliderItem {
+  overflow-y: hidden;
+
+  @include respond-below(lg) {
+    height: 70vh;
+  }
+  @include respond-above(lg) {
+    max-height: 750px;
+  }
 }
 
 .sliderBackgroundLayer {
